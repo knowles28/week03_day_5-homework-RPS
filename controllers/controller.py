@@ -7,7 +7,7 @@ from models.game import *
 def home():
     return render_template('home.html', title='Home')
 
-@app.route('/<player-one-choice>/<player-two-choice>')
+@app.route('/<p1_choice>/<p2_choice>')
 def play(p1_choice, p2_choice):
     player_1 = Player("Player_1", p1_choice)
     player_2 = Player("Player_2", p2_choice)
