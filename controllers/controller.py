@@ -14,4 +14,5 @@ def play(p1_choice, p2_choice):
 
     winner = Game.play(player_1.name, player_1.choice, player_2.name, player_2.choice)
     
+    
     return render_template('results.html', title="Results", player_1=player_1, player_2=player_2, winner=winner)

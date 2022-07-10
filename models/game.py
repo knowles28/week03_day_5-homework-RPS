@@ -5,10 +5,10 @@ class Game():
     def play(p1_name, p1_choice, p2_name, p2_choice):
         # p1 = None
         # p2 = None
-        winner = p1_name
+        winner = None
         
         if p1_choice == p2_choice:
-            winner == "Draw"
+            winner == None
         
         elif p1_choice == "rock" and p2_choice == "scissors":
             winner = p1_name
