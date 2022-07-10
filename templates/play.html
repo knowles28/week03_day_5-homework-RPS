@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div class="player-form">
+    <form action="/play" method="post">
+
+        <label for="p1-input">Player One chooses: </label>
+        <input list="p1-input" name="p1-input">
+        <datalist id="p1-input">
+          <option value="rock">
+          <option value="paper">
+          <option value="scissors">
+        </datalist>
+
+        <label for="p2-input">Player Two chooses: </label>
+        <input list="p2-input" name="p2-input">
+        <datalist id="p2-input">
+          <option value="rock">
+          <option value="paper">
+          <option value="scissors">
+        </datalist>
+
+        <input type="submit">
+
+    </form>
+
+
+</div>
+
+
+{% endblock %}

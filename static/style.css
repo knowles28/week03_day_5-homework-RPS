@@ -8,12 +8,12 @@ body {
 }
 
 header {
-    padding: 12px;
+    padding: 20px;
+    padding-right: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #81b29a;
-
     font-size: 2.2rem;
 
 
@@ -25,17 +25,35 @@ nav ul {
 
 }
 
-a {
+.rules {
+    padding: 20px;
+}
+
+a:link {
     text-decoration: none;
+    color: #35374c;
 
 }
 
 a:hover {
     cursor: pointer;
     color: #e07a5f;
-    transition: scale(1.2);
+    transition: scale(1.5);
 }
 
 .wrapper {
-    padding: 12px;
+    padding: 20px;
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    column-gap: 25px;
+
+}
+
+.player-choice {
+    padding: 40px;
+    text-align: center;
+    border: #35374c 2px;
+    background-color: #e07a5f;
+    border-radius: 10px;
 }

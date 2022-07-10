@@ -3,27 +3,32 @@
 {% block content %}
 
 <div class="wrapper">
+
+    <div class="result">
+        <h2>Results</h2> 
+
+        {% if winner == None %}
+            {{ player_1.name }} and {{ player_2.name }} draw with {{ player_1.choice }} !
+        {% elif winner == player_1.name %}
+            {{ player_1.name }} wins with {{ player_1.choice }} !
+        {% elif winner == player_2.name %}
+            {{ player_2.name }} wins with {{ player_2.choice }} !
     
-    <h2>Results</h2> 
+        {% endif %}
+    </div>
 
-
-    {% if winner == None %}
-        {{ player_1.name }} and {{ player_2.name }} draw with {{ player_1.choice }} !
-    {% elif winner == player_1.name %}
-        {{ player_1.name }} wins with {{ player_1.choice }} !
-    {% elif winner == player_2.name %}
-        {{ player_2.name }} wins with {{ player_2.choice }} !
-    
-    {% endif %}
-
-
-
-    <u><h4>Player Choices</h4></u>
-    <p>
-        <b>{{ player_1.name }} </b>: {{ player_1.choice }}
+    <div class="player-choice">
+        <b>{{ player_1.name }} </b> chose:
         <br>
-        <b>{{ player_2.name }} </b>: {{ player_2.choice }}
-    </p>
+        <b>{{ player_1.choice }}</b>
+    </div>
+
+    <div class="player-choice">
+        <b>{{ player_2.name }} </b> chose:
+        <br>
+        <b>{{ player_2.choice }}</b>
+
+    </div>
 </div>
 
 
