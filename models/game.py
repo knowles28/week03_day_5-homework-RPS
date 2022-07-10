@@ -1,36 +1,65 @@
 class Game():
-    def __init__(self, p1_choice, p2_choice):
-        self.p1_choice = p1_choice
-        self.p2_choice = p2_choice
+    def __init__(self):
+        self
     
-    def play(choice1, choice2):
+    def play(p1_name, p1_choice, p2_name, p2_choice):
+        # p1 = None
+        # p2 = None
+        winner = p1_name
         
-        if choice1 == "rock" and choice2 == "rock":
-            return "Player 1 & Player 2 draw with rock"
+        if p1_choice == p2_choice:
+            winner == "Draw"
         
-        elif choice1 == "paper" and choice2 == "paper":
-            return "Player 1 & Player 2 draw with paper"
+        elif p1_choice == "rock" and p2_choice == "scissors":
+            winner = p1_name
+        elif p2_choice == "rock" and p1_choice == "scissors":
+            winner = p2_name
         
-        elif choice1 == "scissors" and choice2 == "scissors":
-            return "Player 1 & Player 2 draw with scissors"
+        elif p1_choice == "rock" and p2_choice == "paper":
+            winner = p2_name
+        elif p2_choice == "rock" and p1_choice == "paper":
+            winner = p1_name
+        
+        elif p1_choice == "paper" and p2_choice == "scissors":
+            winner = p1_name
+        elif p2_choice == "paper" and p1_choice == "scissors":
+            winner = p2_name
+            
+        return winner
+        
+        # if p1 == None and p2 == None:
+        #     return f"{player_1.name} and {player_2.name} draw with {p1_choice}!"
+        # elif p1 == True:
+        #     return f"{player_1.name} wins with {p1_choice}!"
+        # elif p2 == True:
+        #     return f"{player_2.name} wins with {p2_choice}!"
         
         
-        elif choice1 == "rock" and choice2 == "scissors":
-            return "Player 1 wins with rock"
-        elif choice2 == "rock" and choice1 == "scissors":
-            return "Player 2 wins with rock"
+#_________________PREVIOUS VERSIONS OF def play():
         
+#   def play(player1_name, p1_choice, player2_name, p2_choice):
+#         p1 = None
+#         p2 = None       
+#         if p1_choice == p2_choice:
+#             p1 == None, p2 == None
+#         elif p1_choice == "rock" and p2_choice == "scissors":
+#             p1 == True
+#         elif p2_choice == "rock" and p1_choice == "scissors":
+#             p2 == True
+              
+#         elif p1_choice == "rock" and p2_choice == "paper":
+#             p2 == True
+#         elif p2_choice == "rock" and p1_choice == "paper":
+#             p1 == True        
+#         elif p1_choice == "paper" and p2_choice == "scissors":
+#             p1 == True
+#         elif p2_choice == "paper" and p1_choice == "scissors":
+#             p2 == True
         
-        elif choice1 == "rock" and choice2 == "paper":
-            return "Player 2 wins with paper"
-        elif choice2 == "rock" and choice1 == "paper":
-            return "Player 1 wins with paper"
-        
-        
-        elif choice1 == "paper" and choice2 == "scissors":
-            return "Player 1 wins with paper"
-        elif choice2 == "paper" and choice1 == "scissors":
-            return "Player 2 wins with paper"
-    
-
+#         if p1 == None and p2 == None:
+#             return f"{player1_name} and {player2_name} draw with {p1_choice}!"
+#         elif p1 == True:
+#             return f"{player1_name} wins with {p1_choice}!"
+#         elif p2 == True:
+#             return f"{player2_name} wins with {p2_choice}!"
         
