@@ -3,23 +3,25 @@
 {% block content %}
 
 <div class="player-form">
-    <form action="/play" method="post">
-
-        <label for="p1-input">Player One chooses: </label>
-        <input list="p1-input" name="p1-input">
-        <datalist id="p1-input">
-          <option value="rock">
-          <option value="paper">
-          <option value="scissors">
-        </datalist>
-
+    <form action="/results" method="post">
+        <div id="p1-choice">
+            <label for="p1-input">Player One chooses: </label>
+            <select id="p1-input" name="p1">
+              <option value="rock">Rock</option>
+              <option value="paper">Paper</option>
+              <option value="scissors">Scissors</option>
+            </select>
+        </div>
+        <br>
+        <div id="p2-choice">
         <label for="p2-input">Player Two chooses: </label>
-        <input list="p2-input" name="p2-input">
-        <datalist id="p2-input">
-          <option value="rock">
-          <option value="paper">
-          <option value="scissors">
-        </datalist>
+        <select id="p2-input" name="p2">
+          <option value="rock">Rock</option>
+          <option value="paper">Paper</option>
+          <option value="scissors">Scissors</option>
+        </select>
+        </div>
+        <br>
 
         <input type="submit">
 
@@ -30,3 +32,28 @@
 
 
 {% endblock %}
+
+
+<!-- ______________ALT OPTION FOR FORM ______________________ -->
+
+<!-- <form action="/results" method="post">
+
+    <label for="p1-input">Player One chooses: </label>
+    <input list="p1-input" name="p1">
+    <datalist id="p1-input">
+      <option value="rock">
+      <option value="paper">
+      <option value="scissors">
+    </datalist>
+
+    <label for="p2-input">Player Two chooses: </label>
+    <input list="p2-input" name="p2">
+    <datalist id="p2-input">
+      <option value="rock">
+      <option value="paper">
+      <option value="scissors">
+    </datalist>
+
+    <input type="submit">
+
+</form> -->

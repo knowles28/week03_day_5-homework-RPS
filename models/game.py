@@ -21,9 +21,9 @@ class Game():
             winner = p1_name
         
         elif p1_choice == "paper" and p2_choice == "scissors":
-            winner = p1_name
-        elif p2_choice == "paper" and p1_choice == "scissors":
             winner = p2_name
+        elif p2_choice == "paper" and p1_choice == "scissors":
+            winner = p1_name
             
         return winner
  
