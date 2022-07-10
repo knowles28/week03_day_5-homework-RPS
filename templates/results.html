@@ -2,14 +2,16 @@
 
 {% block content %}
 
-<h2>Results</h2> 
 <div class="wrapper">
+    
+    <h2>Results</h2> 
+
 
     {% if winner == None %}
         {{ player_1.name }} and {{ player_2.name }} draw with {{ player_1.choice }} !
-    {% elif winner == player_1 %}
+    {% elif winner == player_1.name %}
         {{ player_1.name }} wins with {{ player_1.choice }} !
-    {% elif winner == player_2 %}
+    {% elif winner == player_2.name %}
         {{ player_2.name }} wins with {{ player_2.choice }} !
     
     {% endif %}
@@ -26,5 +28,3 @@
 
 
 {% endblock %}
-
-<!-- IF winner == player_1, PRINT player_1 wins with player_1 choice -->
